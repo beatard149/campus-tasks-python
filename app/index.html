@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Tasks • Playwright Lab</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow"><span class="dot"></span> PLAYWRIGHT LAB / LOCAL DEMO</div>
+      <h1>Campus Tasks<span class="period">.</span></h1>
+      <p class="subtitle">Your to-do list has entered its <strong>locked-in era.</strong></p>
+    </header>
+    <section class="workspace" aria-label="Task workspace">
+      <form id="add-form" novalidate>
+        <label for="new-task">New task</label>
+        <div class="input-row">
+          <input id="new-task" name="task" placeholder="e.g. Submit assignment" autocomplete="off">
+          <button type="submit" class="primary">Add task <span aria-hidden="true">↗</span></button>
+        </div>
+        <p id="validation" role="alert" hidden></p>
+      </form>
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter tasks">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="active" aria-pressed="false">Active</button>
+          <button type="button" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+        <span class="counter"><strong data-testid="remaining-count">0</strong> remaining</span>
+      </div>
+      <ul id="task-list" aria-label="Tasks"></ul>
+      <div id="empty-state"><div class="empty-icon" aria-hidden="true">✓</div><h2>Fresh start. Main character energy.</h2><p>Add a task and make the first move.</p></div>
+      <footer class="task-footer"><span id="list-summary">0 tasks in total</span><button id="clear-completed" type="button" class="text-button">Clear completed</button></footer>
+    </section>
+    <aside class="tip-panel" aria-label="Study tip">
+      <div><span class="tip-label">BONUS SIDE QUEST</span><p id="study-tip" role="status">One small API. One useful study tip.</p></div>
+      <button id="get-tip" type="button">Get study tip</button>
+    </aside>
+    <p class="footnote">JavaScript + localStorage <span>•</span> No account. No cloud. Just the lab.</p>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

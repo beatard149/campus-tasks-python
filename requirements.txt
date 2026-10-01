@@ -1,0 +1,2 @@
+# Exact versions validated for this workshop.
+-r requirements.lock
